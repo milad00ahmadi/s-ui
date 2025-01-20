@@ -13,7 +13,7 @@
       type="number"
       min="0"
       hide-details
-      v-model="data.server_port">
+      v-model="server_port">
       </v-text-field>
     </v-col>
   </v-row>
@@ -54,6 +54,10 @@ export default {
         }
       }
     },
+    server_port: {
+      get() { return this.$props.data.server_port },
+      set(v: string) { this.$props.data.server_port = parseInt(v, 10) }
+    }
   }
 }
 </script>

@@ -117,7 +117,7 @@ export default {
   },
   methods: {
     addPeer() { 
-      this.$props.data.peers.push({server: '', port: ''})
+      this.$props.data.peers.push({server: '', server_port: 0})
     }
   },
   computed: {
